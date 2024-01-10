@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import logo from "../assets/images/logo.webp";
 
 function Navbar() {
-  const [open, setOpen] = useState("false");
-  { open ? document.body.classList.remove("overflow-hidden") : document.body.classList.add("overflow-hidden") };
-  const [open2, setOpen2] = useState("false");
-  { open2 ? "" : document.body.classList.remove("overflow-hidden") };
+  const [open, setOpen] = useState(false);
+  { open == false ? document.body.classList.remove("overflow-hidden") : document.body.classList.add("overflow-hidden") };
   return (
     <>
       <nav className="h-[88px] max-w-[1214px] mx-auto px-3 flex justify-between items-center w-full">
@@ -24,52 +22,57 @@ function Navbar() {
         >
           <span
             className={`w-full h-[5px] duration-300 bg-[#FFF] rounded ${
-              open ? "" : "rotate-45"
+              open == false ? "" : "rotate-45"
             }`}
           ></span>
           <span
             className={`w-full h-[5px] duration-300 bg-[#FFF] rounded ${
-              open ? "" : "rotate-[135deg] translate-y-[-20px]"
+              open == false ? "" : "rotate-[135deg] translate-y-[-20px]"
             }`}
           ></span>
           <span
             className={`w-full h-[5px] duration-300 bg-[#FFF] rounded ${
-              open ? "" : "hidden"
+              open == false ? "" : "hidden"
             }`}
           ></span>
         </div>
         <ul
-          className={`duration-300 ease-linear flex items-center gap-[50px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(18,20,78)_0%,#010223_100%)] fixed right-[-100%] top-0 w-full h-full flex-col justify-center min-[992px]:static min-[992px]:bg-none min-[992px]:right-0 min-[992px]:flex-row min-[992px]:justify-end ${open ? "" : "right-[0%]"
-          } ${open2 ? "" : "right-[-100%]"}`}
+          className={`duration-300 ease-linear flex items-center gap-[50px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(18,20,78)_0%,#010223_100%)] fixed left-[-100%] top-0 w-full h-full flex-col justify-center min-[992px]:static min-[992px]:bg-none min-[992px]:right-0 min-[992px]:flex-row min-[992px]:justify-end ${
+            open == false ? "" : "left-[0%]"
+          }`}
         >
           <li>
             <a
-              href=""
-              className="text-[#FFF] font-montserrat text-base not-italic font-semibold leading-[28px] duration-300 hover:text-[#313EF7] relative after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-[#313EF7] after:bottom-[-10px] after:left-[50%] after:duration-300 hover:after:left-0" onClick={() => setOpen2(!open2)}
+              href="#first"
+              className="text-[#FFF] font-montserrat text-base not-italic font-semibold leading-[28px] duration-300 hover:text-[#313EF7] relative after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-[#313EF7] after:bottom-[-10px] after:left-[50%] after:duration-300 hover:after:left-0"
+              onClick={() => setOpen(false) }
             >
               All Flight
             </a>
           </li>
           <li>
             <a
-              href=""
-              className="text-[#FFF] font-montserrat text-base not-italic font-semibold leading-[28px] duration-300 hover:text-[#313EF7] relative after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-[#313EF7] after:bottom-[-10px] after:left-[50%] after:duration-300 hover:after:left-0" onClick={() => setOpen2(!open2)}
+              href="#second"
+              className="text-[#FFF] font-montserrat text-base not-italic font-semibold leading-[28px] duration-300 hover:text-[#313EF7] relative after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-[#313EF7] after:bottom-[-10px] after:left-[50%] after:duration-300 hover:after:left-0"
+              onClick={() => setOpen(false) }
             >
               Schedule
             </a>
           </li>
           <li>
             <a
-              href=""
-              className="text-[#FFF] font-montserrat text-base not-italic font-semibold leading-[28px] duration-300 hover:text-[#313EF7] relative after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-[#313EF7] after:bottom-[-10px] after:left-[50%] after:duration-300 hover:after:left-0" onClick={() => setOpen2(!open2)}
+              href="#third"
+              className="text-[#FFF] font-montserrat text-base not-italic font-semibold leading-[28px] duration-300 hover:text-[#313EF7] relative after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-[#313EF7] after:bottom-[-10px] after:left-[50%] after:duration-300 hover:after:left-0"
+              onClick={() => setOpen(false) }
             >
               Passengers
             </a>
           </li>
           <li>
             <a
-              href=""
-              className="text-[#FFF] font-montserrat text-base not-italic font-semibold leading-[28px] duration-300 hover:text-[#313EF7] relative after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-[#313EF7] after:bottom-[-10px] after:left-[50%] after:duration-300 hover:after:left-0" onClick={() => setOpen2(!open2)}
+              href="#fourth"
+              className="text-[#FFF] font-montserrat text-base not-italic font-semibold leading-[28px] duration-300 hover:text-[#313EF7] relative after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-[#313EF7] after:bottom-[-10px] after:left-[50%] after:duration-300 hover:after:left-0"
+              onClick={() => setOpen(false) }
             >
               Your Orders
             </a>
@@ -77,7 +80,8 @@ function Navbar() {
           <li>
             <a
               href=""
-              className="py-[10px] px-[40px] rounded-[59px] border border-solid border-[#FFF] text-[#FFF] font-montserrat text-base not-italic font-semibold leading-[28px] duration-300 relative group overflow-hidden inline-flex" onClick={() => setOpen2(!open2)}
+              className="py-[10px] px-[40px] rounded-[59px] border border-solid border-[#FFF] text-[#FFF] font-montserrat text-base not-italic font-semibold leading-[28px] duration-300 relative group overflow-hidden inline-flex"
+              onClick={() => setOpen2(!open2)}
             >
               <span className="absolute duration-300 inset-0 bg-[#313EF7] w-0 group-hover:w-full"></span>
               <span className="relative">Let's Fly</span>

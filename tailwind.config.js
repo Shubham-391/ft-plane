@@ -4,12 +4,17 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'headerbg': "url('/src/assets/images/headerbg.webp')",
+        headerbg: "url('/src/assets/images/headerbg.webp')",
+        footerbg: "url('/src/assets/images/footerbg.webp')",
+      },
+      listStyleImage: {
+        bluelist: 'url("/src/assets/images/bluelist.webp")',
       },
     },
     fontFamily: {
-      montserrat: ['Montserrat'],
-      inter: ['Inter'],
+      montserrat: ["Montserrat"],
+      inter: ["Inter"],
+      rubik: ["Rubik"],
     },
   },
   plugins: [],

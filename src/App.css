@@ -1,2 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;500;600;700;800;900&family=Rubik&display=swap");
+
+.slider1 .slick-dots li button:before {
+  content: "" !important;
+}
+.slick-dots li {
+  width: 10px !important;
+  height: 10px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 50%;
+}
+.slick-dots {
+  display: flex !important;
+  flex-direction: column;
+  gap: 8px;
+  bottom: unset !important;
+  width: unset !important;
+  top: 90px;
+  right: 15px;
+}
+.slick-dots li.slick-active {
+  background: white !important;
+}
