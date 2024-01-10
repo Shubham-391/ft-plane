@@ -9,13 +9,13 @@ function Navbar() {
       <nav className="h-[88px] max-w-[1214px] mx-auto px-3 flex justify-between items-center w-full">
         <div>
           <img
-            className="w-[120px] h-[30px] min-[400px]:w-[164px] min-[400px]:h-[34px] relative z-[2]"
+            className="w-[120px] h-[30px] min-[400px]:w-[164px] min-[400px]:h-[34px] relative z-[6]"
             src={logo}
             alt="logo"
           />
         </div>
         <div
-          className={`flex w-[30px] min-[400px]:w-[35px] h-[25px] duration-300 flex-col items-center justify-between min-[992px]:hidden z-[2] ${
+          className={`flex w-[30px] min-[400px]:w-[35px] h-[25px] duration-300 flex-col items-center justify-between min-[992px]:hidden z-[6] ${
             open ? "" : "translate-y-[10px]"
           }`}
           onClick={() => setOpen(!open)}
@@ -37,7 +37,7 @@ function Navbar() {
           ></span>
         </div>
         <ul
-          className={`duration-300 ease-linear flex items-center gap-[50px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(18,20,78)_0%,#010223_100%)] fixed left-[-100%] top-0 w-full h-full flex-col justify-center min-[992px]:static min-[992px]:bg-none min-[992px]:right-0 min-[992px]:flex-row min-[992px]:justify-end ${
+          className={`duration-300 ease-linear flex items-center gap-[50px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(18,20,78)_0%,#010223_100%)] fixed left-[-100%] top-0 w-full h-full flex-col justify-center min-[992px]:static min-[992px]:bg-none min-[992px]:right-0 min-[992px]:flex-row min-[992px]:justify-end z-[5] ${
             open == false ? "" : "left-[0%]"
           }`}
         >
