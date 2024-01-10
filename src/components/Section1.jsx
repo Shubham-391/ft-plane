@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Section1img from "../assets/images/Section1img.webp";
+import section1img from "../assets/images/section1img.webp";
 import line from "../assets/images/line.webp";
 
 function Section1() {
@@ -518,12 +518,22 @@ function Section1() {
         </div>
 
         <div className="flex flex-wrap min-[1200px]:my-[100px] overflow-hidden">
-          <div data-aos="fade-right" data-aos-once="true" data-aos-duration="1000" className="w-full min-[1200px]:w-[51%] flex justify-center min-[1200px]:justify-start">
+          <div
+            data-aos="fade-right"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            className="w-full min-[1200px]:w-[51%] flex justify-center min-[1200px]:justify-start"
+          >
             <div className="max-w-[560px] max-h-[456px]">
-              <img className="w-full" src={Section1img} alt="travel image" />
+              <img className="w-full" src={section1img} alt="travel image" />
             </div>
           </div>
-          <div data-aos="fade-left" data-aos-once="true" data-aos-duration="1000" className="w-full min-[1200px]:w-[49%]">
+          <div
+            data-aos="fade-left"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            className="w-full min-[1200px]:w-[49%]"
+          >
             <p className="text-[#313EF7] font-montserrat text-xl not-italic font-black leading-[24px] mb-4">
               Let's Fly
             </p>
